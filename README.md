@@ -275,7 +275,7 @@ requirements.txt  LICENSE  README.md
 
 | Name | Affiliation | Contribution |
 |---|---|---|
-| **Rishabh Aryan** (lead) | IIT Ropar × NIELIT Ropar AI/ML Program | Conceptualization, modelling pipeline, fairness evaluation and mitigation, live dashboard |
+| **Rishabh Aryan** (lead) | M.Tech (Artificial Intelligence and Data Science), Department of Computer Science and Engineering, Indian Institute of Information Technology, Bhagalpur (Bihar) · rishabh.250201011@iiitbh.ac.in | Conceptualization, modelling pipeline, fairness evaluation and mitigation, live dashboard |
 | Nikshep Paliwal | PhD (Visvesvaraya Fellowship), NIELIT Deemed to be University Ropar, India · ndu202501348@nielit.ac.in | Governance framework crosswalk (NIST/OECD/EU AI Act/IEEE), data provenance and DPIA, explainability audit (SHAP/LIME/permutation) |
 | Nishtha Kalia | BCA, Department of Computer Science and Applications, Mehr Chand Mahajan DAV College for Women, Panjab University, Chandigarh, India · nishtha.kalia.2411@gmail.com | Literature review, documentation and writing, results validation |
 
