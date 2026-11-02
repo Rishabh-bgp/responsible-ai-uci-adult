@@ -1,0 +1,7 @@
+metric,best_is,Logistic Regression,Random Forest,XGBoost,Neural Network (MLP)
+accuracy,highest,0,0,10,0
+f1,highest,0,0,10,0
+roc_auc,highest,0,0,10,0
+DPD,lowest,1,3,6,0
+EOD,lowest,0,4,5,1
+FPRD,lowest,0,2,8,0

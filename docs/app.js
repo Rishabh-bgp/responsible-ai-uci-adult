@@ -49,3 +49,13 @@ fetch('data/results.json').then(r=>r.json()).then(D=>{
   const m=g?L.group.test:L.base;$('#wcmp').textContent=`Logistic Regression on test with ${g?'group':'single'} thresholds: accuracy ${f3(m.accuracy)} · DPD ${f3(m.DPD)} · EOD ${f3(m.EOD)} · FPRD ${f3(m.FPRD)}. Illustration only, not for decisions about individuals.`};
  F.oninput=run;$('#gt').onchange=run;run();
 });
+fetch('data/multirun.json').then(r=>r.json()).then(R=>{
+ const ms=['accuracy','f1','roc_auc','DPD','EOD','FPRD'];
+ seg($('#mrSeg'),ms,m=>{const S=R.summary,lo=Math.min(...S.map(s=>s[m+'_min'])),hi=Math.max(...S.map(s=>s[m+'_max'])),pad=(hi-lo)*.15,a=lo-pad,b=hi+pad,W=720,x0=170,X=v=>x0+(v-a)/(b-a)*(W-x0-150);
+  let s='';[a,(a+b)/2,b].forEach(t=>s+=`<line x1="${X(t)}" x2="${X(t)}" y1="10" y2="225" stroke="#262638"/><text x="${X(t)-14}" y="243">${t.toFixed(3)}</text>`);
+  S.forEach((r,i)=>{const y=35+i*52,mu=r[m+'_mean'],sd=r[m+'_std'];s+=`<text x="4" y="${y+4}">${r.model}</text><line x1="${X(r[m+'_min'])}" x2="${X(r[m+'_max'])}" y1="${y}" y2="${y}" stroke="#8c7bff" stroke-width="2"/><rect x="${X(mu-sd)}" y="${y-9}" width="${Math.max(2,X(mu+sd)-X(mu-sd))}" height="18" fill="rgba(46,230,214,.25)" stroke="#2ee6d6"/><circle cx="${X(mu)}" cy="${y}" r="6" fill="#ff2e88"/><text x="${W-140}" y="${y+4}" style="fill:#e9e7f5">${f3(mu)} ± ${f3(sd)}</text>`});
+  $('#mrPlot').innerHTML=s;const k=R.rank.find(q=>q.metric===m);
+  $('#mrRank').textContent=k?`Best model per seed (${k.best_is}): `+['Logistic Regression','Random Forest','XGBoost','Neural Network (MLP)'].map(n=>`${SHORT[n]} ${k[n]}/10`).join(' · '):''},'accuracy');
+ const g=n=>R.mitigation.find(q=>q.metric===n);
+ $('#mrMit').innerHTML=`Mitigation rule chose <b>XGBoost + ThresholdOpt (demographic parity)</b> in 10/10 seeds → test DPD ${f3(g('test_DPD').mean)} ± ${f3(g('test_DPD').std)}, accuracy ${f3(g('test_accuracy').mean)} ± ${f3(g('test_accuracy').std)}, EOD ${f3(g('test_EOD').mean)} ± ${f3(g('test_EOD').std)}. Hyperparameters fixed from seed 42; ${R.n_boot} bootstrap resamples per run; explanations not repeated.`;
+});

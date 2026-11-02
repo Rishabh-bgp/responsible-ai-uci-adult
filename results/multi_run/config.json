@@ -1,0 +1,18 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "n_boot_per_run": 500,
+  "hyperparameters": "fixed from the single seed-42 CV run",
+  "explanations": "not repeated (single-run only)",
+  "runtime_sec": 1354.9
+}

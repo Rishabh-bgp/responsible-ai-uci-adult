@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="style.css"></head><body>
 <div class="scan"></div>
 <header><div><h1>FAIR<span>//</span>AUDIT</h1><p class="tag">Responsible-AI audit of four income classifiers on UCI Adult · <b id="nrows"></b> records · every number comes from the executed notebook</p></div>
-<nav><a href="#perf">Models</a><a href="#fair">Fairness</a><a href="#inter">Sex×Race</a><a href="#pareto">Mitigation</a><a href="#xai">Explanations</a><a href="#gov">Governance</a><a href="#whatif">What-if</a></nav></header>
+<nav><a href="#perf">Models</a><a href="#fair">Fairness</a><a href="#inter">Sex×Race</a><a href="#pareto">Mitigation</a><a href="#xai">Explanations</a><a href="#gov">Governance</a><a href="#whatif">What-if</a><a href="#multi">10 seeds</a></nav></header>
 <div class="disc"><b>NOTE</b> The numbers reported here are produced by this code on the public UCI Adult data and may differ from the values reported in the accompanying paper, due to differences in data splits, preprocessing, hyperparameters, thresholds and random seeds.</div>
 <main>
 <section id="perf" class="card wide"><h2><i>01</i> Test-set performance <small>thresholds frozen on validation</small></h2><div class="seg" id="metricSeg"></div><div id="perfBars" class="bars"></div><div class="tbl" id="t3"></div></section>
@@ -15,6 +15,7 @@
 <section id="whatif" class="card"><h2><i>07</i> What-if predictor <small>exported Logistic Regression</small></h2><form id="wf"></form>
 <label class="tog"><input type="checkbox" id="gt"> group-specific thresholds (demographic parity, set on validation)</label>
 <div class="gauge"><div id="gfill"></div></div><div id="wout" class="info"></div><div id="wcmp" class="note"></div></section>
+<section id="multi" class="card wide"><h2><i>09</i> Repeated runs <small>10 seeds · mean ± std (box) · min–max (line) · test set</small></h2><div class="seg" id="mrSeg"></div><svg id="mrPlot" viewBox="0 0 720 250"></svg><div id="mrRank" class="note"></div><div id="mrMit" class="info"></div></section>
 <section class="card wide"><h2><i>08</i> Paper vs reproduced <small>neutral comparison</small></h2><div class="tbl" id="pv"></div></section>
 </main>
 <footer><p>6-Month Industrial Training &amp; Certification Program in AI &amp; ML, jointly offered by <a href="https://www.iitrpr.ac.in/">IIT Ropar</a> and <a href="https://www.nielit.gov.in/ropar/">NIELIT Ropar</a>, under MeitY, Govt. of India.</p>

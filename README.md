@@ -70,7 +70,8 @@ flowchart LR
 |---|---|---|
 | 1 | [notebooks/Responsible_AI_UCI_Adult.ipynb](notebooks/Responsible_AI_UCI_Adult.ipynb) | Executed notebook with every section, table and figure |
 | 2 | [scripts/responsible_ai_uci_adult.py](scripts/responsible_ai_uci_adult.py) | Plain-Python version, organised as one function per stage plus `main()`. Writes everything to `results/`. Verified to give **byte-identical** result CSVs to the notebook |
-| 3 | [scripts/build_notebook.py](scripts/build_notebook.py) | Generates the notebook from source |
+| 3 | [notebooks/Multi_Run_Seeds.ipynb](notebooks/Multi_Run_Seeds.ipynb) · [scripts/multi_run.py](scripts/multi_run.py) | Repeated runs over 10 seeds: per-run and summary CSVs, boxplots |
+| 4 | [scripts/build_notebook.py](scripts/build_notebook.py) | Generates the notebook from source |
 
 ## 📈 Results (from the executed notebook, seed 42)
 
@@ -129,6 +130,65 @@ No method is best on all three dimensions. SHAP gives the largest deletion drop,
 ### Governance crosswalk (interpretive coding)
 Accountability, Transparency, Fairness, Human oversight and Robustness all score **1.000**. Purpose limitation scores **0.667**, DPIA **0.750** and Independent review **0.750**.
 ⚠️ The construct-to-framework sets were coded by the analyst to express the coverage described in the source study, so these values follow from the coding. They are **not** independent evidence. The NIST AI RMF 1.0 Core encoded here has GOVERN 19 / MAP 18 / MEASURE 22 / MANAGE 13 (72 in total). The reference study lists 21 / 14 for the last two.
+
+## 🔁 Repeated runs (10 seeds)
+
+The pipeline was rerun for **seeds 0–9**. Each seed changes the stratified split and every model's random state, and each run repeats training, validation thresholds, test metrics, fairness gaps by sex and the mitigation choice.
+- Code: [scripts/multi_run.py](scripts/multi_run.py), executed notebook: [notebooks/Multi_Run_Seeds.ipynb](notebooks/Multi_Run_Seeds.ipynb), outputs: [results/multi_run/](results/multi_run/) (`per_run.csv`, `summary.csv`, `rank_stability.csv`, `mitigation_per_run.csv`, `mitigation_summary.csv`, `config.json`).
+- **Simplifications (documented):**
+  - Hyperparameters are fixed to the seed-42 CV choice, not re-tuned per seed.
+  - Each run uses **500** bootstrap resamples instead of 5,000.
+  - The **explanation audit is not repeated**, because it is the slowest stage, so Table 6 stays single-run.
+- Total runtime was 22.6 minutes on 8 CPU cores. The single-run results above are unchanged.
+
+**Mean ± std over 10 seeds (test set)**
+
+| Model | Accuracy | F1 | ROC-AUC | DPD | EOD | FPRD |
+|---|---|---|---|---|---|---|
+| Logistic Regression | 0.839 ± 0.007 | 0.688 ± 0.005 | 0.905 ± 0.002 | 0.255 ± 0.018 | 0.142 ± 0.024 | 0.143 ± 0.020 |
+| Random Forest | 0.854 ± 0.005 | 0.706 ± 0.007 | 0.916 ± 0.003 | 0.235 ± 0.013 | 0.109 ± 0.028 | 0.121 ± 0.014 |
+| XGBoost | 0.867 ± 0.004 | 0.728 ± 0.005 | 0.928 ± 0.002 | 0.228 ± 0.019 | 0.107 ± 0.026 | 0.106 ± 0.018 |
+| Neural Network (MLP) | 0.843 ± 0.006 | 0.699 ± 0.005 | 0.911 ± 0.003 | 0.259 ± 0.018 | 0.133 ± 0.034 | 0.145 ± 0.019 |
+
+**Min–max over 10 seeds**
+
+| Model | Accuracy | ROC-AUC | DPD | EOD |
+|---|---|---|---|---|
+| Logistic Regression | 0.825–0.848 | 0.900–0.908 | 0.233–0.285 | 0.108–0.176 |
+| Random Forest | 0.846–0.861 | 0.910–0.920 | 0.220–0.265 | 0.071–0.154 |
+| XGBoost | 0.861–0.873 | 0.925–0.932 | 0.198–0.260 | 0.076–0.151 |
+| Neural Network (MLP) | 0.833–0.853 | 0.907–0.915 | 0.230–0.283 | 0.078–0.206 |
+
+**How often each model is best (out of 10 seeds)**
+
+| Metric | LR | RF | XGBoost | MLP |
+|---|---|---|---|---|
+| accuracy (highest) | 0 | 0 | 10 | 0 |
+| f1 (highest) | 0 | 0 | 10 | 0 |
+| roc_auc (highest) | 0 | 0 | 10 | 0 |
+| DPD (lowest) | 1 | 3 | 6 | 0 |
+| EOD (lowest) | 0 | 4 | 5 | 1 |
+| FPRD (lowest) | 0 | 2 | 8 | 0 |
+
+<table>
+<tr><td width="50%"><img src="results/multi_run/box_performance.png" alt="Boxplots of accuracy, F1 and ROC-AUC per model over 10 seeds"><br><sub>Accuracy, F1, ROC-AUC across 10 seeds</sub></td>
+<td width="50%"><img src="results/multi_run/box_fairness.png" alt="Boxplots of DPD, EOD and FPRD per model over 10 seeds"><br><sub>DPD, EOD, FPRD by sex across 10 seeds</sub></td></tr>
+</table>
+
+What the repeated runs show:
+- **Performance is stable.** The standard deviation across seeds is at most 0.007 for accuracy and 0.003 for ROC-AUC.
+  - XGBoost has the highest accuracy, F1 and AUC in **10/10** seeds.
+  - The full AUC order (XGBoost > RF > MLP > LR) is identical in 10/10 seeds.
+  - The accuracy order of the weaker models is less stable: the full order held in 6/10 seeds, and LR and MLP swap places in 3.
+  - In the single seed-42 run, MLP edged out RF on accuracy. Over 10 seeds RF is ahead on average (0.854 vs 0.843), so that single-run gap was within seed noise.
+- **Fairness gaps vary more than accuracy.** The DPD std is 0.013–0.019, and the EOD std is 0.024–0.034, wide enough to change the ranking between seeds.
+  - XGBoost has the lowest DPD in 6/10 seeds, the lowest EOD in 5/10 and the lowest FPRD in 8/10, so "which model is fairest" is **not** stable across seeds.
+  - Every model has a DPD gap of at least 0.198 in every seed.
+- **The mitigation choice is fully stable.** The prespecified rule picked **XGBoost + ThresholdOptimizer (demographic parity)** in 10/10 seeds.
+  - Test DPD: 0.007 ± 0.005
+  - Accuracy: 0.852 ± 0.002
+  - F1: 0.636 ± 0.014
+  - EOD: 0.323 ± 0.027, consistently far above the baseline. The same trade-off appears in every seed.
 
 ## 🖼️ Output gallery
 
@@ -189,6 +249,7 @@ cd responsible-ai-uci-adult
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python scripts/responsible_ai_uci_adult.py        # writes results/ (about 4 min on 8 cores)
+python scripts/multi_run.py --seeds 10 --boot 500  # repeated runs → results/multi_run/ (about 23 min)
 # or run the notebook (writes outputs next to the notebook):
 cd notebooks && jupyter nbconvert --to notebook --execute --inplace Responsible_AI_UCI_Adult.ipynb
 ```
@@ -198,7 +259,7 @@ Run the dashboard locally: `cd docs && python -m http.server 8000`, then open ht
 ```
 notebooks/   executed Jupyter notebook
 scripts/     responsible_ai_uci_adult.py (full pipeline), build_notebook.py
-results/     table CSVs, provenance.json, reproducibility_log.json, web_results.json, figures/
+results/     table CSVs, provenance.json, reproducibility_log.json, web_results.json, figures/, multi_run/ (10-seed experiment)
 docs/        FAIR//AUDIT dashboard on GitHub Pages (index.html, style.css, app.js, data/results.json, screenshots)
 requirements.txt  LICENSE  README.md
 ```
