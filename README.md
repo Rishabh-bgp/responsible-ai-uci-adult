@@ -25,6 +25,9 @@ intersectional checks, pre-, in- and post-processing mitigation on a validation 
 > Practice work by **Rishabh Aryan** for the **6-Month Industrial Training & Certification Program in Artificial Intelligence and Machine Learning**, jointly offered by [IIT Ropar](https://www.iitrpr.ac.in/) and [NIELIT Ropar](https://www.nielit.gov.in/ropar/), under MeitY, Govt. of India.
 > Related: [Machine Learning Part 1](https://github.com/Rishabh-bgp/machine-learning-part-1) · [Part 2](https://github.com/Rishabh-bgp/machine-learning-part-2) · [Part 3](https://github.com/Rishabh-bgp/machine-learning-part-3).
 
+> [!NOTE]
+> The numbers reported here are produced by this code on the public UCI Adult data and may differ from the values reported in the accompanying paper, due to differences in data splits, preprocessing, hyperparameters, thresholds and random seeds.
+
 **Honesty rule:** every number here comes from the code. Nothing is tuned or hard-coded to match a published value.
 A neutral [paper vs reproduced](#-reference-values-vs-reproduced) table is included.
 
