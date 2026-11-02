@@ -1,0 +1,5 @@
+model,threshold,accuracy,precision,recall,f1,roc_auc
+Logistic Regression,0.375,0.845,0.662,0.715,0.688,0.906
+Random Forest,0.345,0.847,0.653,0.765,0.705,0.918
+XGBoost,0.385,0.869,0.715,0.751,0.732,0.929
+Neural Network (MLP),0.37,0.85,0.675,0.718,0.696,0.911

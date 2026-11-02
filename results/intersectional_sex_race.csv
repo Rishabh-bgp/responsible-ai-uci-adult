@@ -1,0 +1,41 @@
+model,sex,race,n,n_pos,sel_rate,TPR,status
+Logistic Regression,Male,Amer-Indian-Eskimo,61,12,0.14754098360655737,0.5833333333333334,confirmatory
+Logistic Regression,Male,Asian-Pac-Islander,185,68,0.4,0.7794117647058824,confirmatory
+Logistic Regression,Male,Black,462,99,0.18398268398268397,0.6262626262626263,confirmatory
+Logistic Regression,Male,Other,48,8,0.1875,0.625,exploratory (sparse)
+Logistic Regression,Male,White,5774,1796,0.35192241080706615,0.7422048997772829,confirmatory
+Logistic Regression,Female,Amer-Indian-Eskimo,49,5,0.04081632653061224,0.4,exploratory (sparse)
+Logistic Regression,Female,Asian-Pac-Islander,106,17,0.14150943396226415,0.5882352941176471,confirmatory
+Logistic Regression,Female,Black,469,29,0.053304904051172705,0.5862068965517241,confirmatory
+Logistic Regression,Female,Other,37,2,0.08108108108108109,1.0,exploratory (sparse)
+Logistic Regression,Female,White,2578,301,0.10473235065942592,0.6013289036544851,confirmatory
+Random Forest,Male,Amer-Indian-Eskimo,61,12,0.2459016393442623,0.75,confirmatory
+Random Forest,Male,Asian-Pac-Islander,185,68,0.43783783783783786,0.8382352941176471,confirmatory
+Random Forest,Male,Black,462,99,0.24242424242424243,0.7373737373737373,confirmatory
+Random Forest,Male,Other,48,8,0.16666666666666666,0.625,exploratory (sparse)
+Random Forest,Male,White,5774,1796,0.3779009352268791,0.7839643652561247,confirmatory
+Random Forest,Female,Amer-Indian-Eskimo,49,5,0.08163265306122448,0.6,exploratory (sparse)
+Random Forest,Female,Asian-Pac-Islander,106,17,0.1320754716981132,0.5294117647058824,confirmatory
+Random Forest,Female,Black,469,29,0.04904051172707889,0.5172413793103449,confirmatory
+Random Forest,Female,Other,37,2,0.05405405405405406,1.0,exploratory (sparse)
+Random Forest,Female,White,2578,301,0.1152055857253685,0.6877076411960132,confirmatory
+XGBoost,Male,Amer-Indian-Eskimo,61,12,0.14754098360655737,0.6666666666666666,confirmatory
+XGBoost,Male,Asian-Pac-Islander,185,68,0.3945945945945946,0.7941176470588235,confirmatory
+XGBoost,Male,Black,462,99,0.19480519480519481,0.696969696969697,confirmatory
+XGBoost,Male,Other,48,8,0.14583333333333334,0.625,exploratory (sparse)
+XGBoost,Male,White,5774,1796,0.33979909941115344,0.7689309576837416,confirmatory
+XGBoost,Female,Amer-Indian-Eskimo,49,5,0.08163265306122448,0.6,exploratory (sparse)
+XGBoost,Female,Asian-Pac-Islander,106,17,0.12264150943396226,0.5882352941176471,confirmatory
+XGBoost,Female,Black,469,29,0.046908315565031986,0.5172413793103449,confirmatory
+XGBoost,Female,Other,37,2,0.05405405405405406,1.0,exploratory (sparse)
+XGBoost,Female,White,2578,301,0.10550814584949574,0.6877076411960132,confirmatory
+Neural Network (MLP),Male,Amer-Indian-Eskimo,61,12,0.14754098360655737,0.5833333333333334,confirmatory
+Neural Network (MLP),Male,Asian-Pac-Islander,185,68,0.41081081081081083,0.8235294117647058,confirmatory
+Neural Network (MLP),Male,Black,462,99,0.17532467532467533,0.5959595959595959,confirmatory
+Neural Network (MLP),Male,Other,48,8,0.1875,0.625,exploratory (sparse)
+Neural Network (MLP),Male,White,5774,1796,0.3475926567370973,0.7472160356347439,confirmatory
+Neural Network (MLP),Female,Amer-Indian-Eskimo,49,5,0.04081632653061224,0.4,exploratory (sparse)
+Neural Network (MLP),Female,Asian-Pac-Islander,106,17,0.1320754716981132,0.5882352941176471,confirmatory
+Neural Network (MLP),Female,Black,469,29,0.03837953091684435,0.4482758620689655,confirmatory
+Neural Network (MLP),Female,Other,37,2,0.05405405405405406,1.0,exploratory (sparse)
+Neural Network (MLP),Female,White,2578,301,0.10473235065942592,0.6079734219269103,confirmatory

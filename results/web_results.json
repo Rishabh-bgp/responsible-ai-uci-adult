@@ -1,0 +1,1280 @@
+{
+ "n": 48842,
+ "split": {
+  "train": 29305,
+  "val": 9768,
+  "test": 9769
+ },
+ "n_boot": 5000,
+ "table3": [
+  {
+   "model": "Logistic Regression",
+   "threshold": 0.375,
+   "accuracy": 0.845,
+   "precision": 0.662,
+   "recall": 0.715,
+   "f1": 0.688,
+   "roc_auc": 0.906
+  },
+  {
+   "model": "Random Forest",
+   "threshold": 0.345,
+   "accuracy": 0.847,
+   "precision": 0.653,
+   "recall": 0.765,
+   "f1": 0.705,
+   "roc_auc": 0.918
+  },
+  {
+   "model": "XGBoost",
+   "threshold": 0.385,
+   "accuracy": 0.869,
+   "precision": 0.715,
+   "recall": 0.751,
+   "f1": 0.732,
+   "roc_auc": 0.929
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "threshold": 0.37,
+   "accuracy": 0.85,
+   "precision": 0.675,
+   "recall": 0.718,
+   "f1": 0.696,
+   "roc_auc": 0.911
+  }
+ ],
+ "table4": [
+  {
+   "group": null,
+   "n": 6530.0,
+   "TN": 3923.0,
+   "FP": 624.0,
+   "FN": 466.0,
+   "TP": 1517.0,
+   "PPR": 0.32787136294027563,
+   "TPR": 0.7650025214321735,
+   "FPR": 0.13723334066417417
+  },
+  {
+   "group": null,
+   "n": 3239.0,
+   "TN": 2809.0,
+   "FP": 76.0,
+   "FN": 117.0,
+   "TP": 237.0,
+   "PPR": 0.09663476381599259,
+   "TPR": 0.6694915254237288,
+   "FPR": 0.02634315424610052
+  },
+  {
+   "group": null,
+   "n": null,
+   "TN": null,
+   "FP": null,
+   "FN": null,
+   "TP": null,
+   "PPR": 0.23123659912428304,
+   "TPR": 0.0955109960084447,
+   "FPR": 0.11089018641807365
+  }
+ ],
+ "table5": [
+  {
+   "model": "Logistic Regression",
+   "DPD": {
+    "pt": 0.24103260085850708,
+    "lo": 0.22858129316943626,
+    "hi": 0.2538508697360414
+   },
+   "EOD": {
+    "pt": 0.1373881381573886,
+    "lo": 0.08542954092839994,
+    "hi": 0.19166559826320326
+   },
+   "FPRD": {
+    "pt": 0.12902208742961535,
+    "lo": 0.11638595390565476,
+    "hi": 0.1418331910997748
+   }
+  },
+  {
+   "model": "Random Forest",
+   "DPD": {
+    "pt": 0.26225750768178974,
+    "lo": 0.24979827116587794,
+    "hi": 0.2751680490499828
+   },
+   "EOD": {
+    "pt": 0.11598587997982857,
+    "lo": 0.06433925656213402,
+    "hi": 0.1693506030069147
+   },
+   "FPRD": {
+    "pt": 0.1500082138450743,
+    "lo": 0.13659241681052015,
+    "hi": 0.16311784218668945
+   }
+  },
+  {
+   "model": "XGBoost",
+   "DPD": {
+    "pt": 0.23123659912428304,
+    "lo": 0.21985462399063485,
+    "hi": 0.24318411189811007
+   },
+   "EOD": {
+    "pt": 0.0955109960084447,
+    "lo": 0.04415433729069982,
+    "hi": 0.1494875936989837
+   },
+   "FPRD": {
+    "pt": 0.11089018641807365,
+    "lo": 0.09921945983772797,
+    "hi": 0.1227065629575026
+   }
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "DPD": {
+    "pt": 0.2396764736058007,
+    "lo": 0.2271981655900262,
+    "hi": 0.2527600071297978
+   },
+   "EOD": {
+    "pt": 0.14757643358376715,
+    "lo": 0.09360240006154008,
+    "hi": 0.20376687009068595
+   },
+   "FPRD": {
+    "pt": 0.12353112246862062,
+    "lo": 0.11102849156070298,
+    "hi": 0.13600745382618437
+   }
+  }
+ ],
+ "intersectional": [
+  {
+   "model": "Logistic Regression",
+   "sex": "Male",
+   "race": "Amer-Indian-Eskimo",
+   "n": 61,
+   "n_pos": 12,
+   "sel_rate": 0.14754098360655737,
+   "TPR": 0.5833333333333334,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Logistic Regression",
+   "sex": "Male",
+   "race": "Asian-Pac-Islander",
+   "n": 185,
+   "n_pos": 68,
+   "sel_rate": 0.4,
+   "TPR": 0.7794117647058824,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Logistic Regression",
+   "sex": "Male",
+   "race": "Black",
+   "n": 462,
+   "n_pos": 99,
+   "sel_rate": 0.18398268398268397,
+   "TPR": 0.6262626262626263,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Logistic Regression",
+   "sex": "Male",
+   "race": "Other",
+   "n": 48,
+   "n_pos": 8,
+   "sel_rate": 0.1875,
+   "TPR": 0.625,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "Logistic Regression",
+   "sex": "Male",
+   "race": "White",
+   "n": 5774,
+   "n_pos": 1796,
+   "sel_rate": 0.35192241080706615,
+   "TPR": 0.7422048997772829,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Logistic Regression",
+   "sex": "Female",
+   "race": "Amer-Indian-Eskimo",
+   "n": 49,
+   "n_pos": 5,
+   "sel_rate": 0.04081632653061224,
+   "TPR": 0.4,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "Logistic Regression",
+   "sex": "Female",
+   "race": "Asian-Pac-Islander",
+   "n": 106,
+   "n_pos": 17,
+   "sel_rate": 0.14150943396226415,
+   "TPR": 0.5882352941176471,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Logistic Regression",
+   "sex": "Female",
+   "race": "Black",
+   "n": 469,
+   "n_pos": 29,
+   "sel_rate": 0.053304904051172705,
+   "TPR": 0.5862068965517241,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Logistic Regression",
+   "sex": "Female",
+   "race": "Other",
+   "n": 37,
+   "n_pos": 2,
+   "sel_rate": 0.08108108108108109,
+   "TPR": 1.0,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "Logistic Regression",
+   "sex": "Female",
+   "race": "White",
+   "n": 2578,
+   "n_pos": 301,
+   "sel_rate": 0.10473235065942592,
+   "TPR": 0.6013289036544851,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Male",
+   "race": "Amer-Indian-Eskimo",
+   "n": 61,
+   "n_pos": 12,
+   "sel_rate": 0.2459016393442623,
+   "TPR": 0.75,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Male",
+   "race": "Asian-Pac-Islander",
+   "n": 185,
+   "n_pos": 68,
+   "sel_rate": 0.43783783783783786,
+   "TPR": 0.8382352941176471,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Male",
+   "race": "Black",
+   "n": 462,
+   "n_pos": 99,
+   "sel_rate": 0.24242424242424243,
+   "TPR": 0.7373737373737373,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Male",
+   "race": "Other",
+   "n": 48,
+   "n_pos": 8,
+   "sel_rate": 0.16666666666666666,
+   "TPR": 0.625,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Male",
+   "race": "White",
+   "n": 5774,
+   "n_pos": 1796,
+   "sel_rate": 0.3779009352268791,
+   "TPR": 0.7839643652561247,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Female",
+   "race": "Amer-Indian-Eskimo",
+   "n": 49,
+   "n_pos": 5,
+   "sel_rate": 0.08163265306122448,
+   "TPR": 0.6,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Female",
+   "race": "Asian-Pac-Islander",
+   "n": 106,
+   "n_pos": 17,
+   "sel_rate": 0.1320754716981132,
+   "TPR": 0.5294117647058824,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Female",
+   "race": "Black",
+   "n": 469,
+   "n_pos": 29,
+   "sel_rate": 0.04904051172707889,
+   "TPR": 0.5172413793103449,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Female",
+   "race": "Other",
+   "n": 37,
+   "n_pos": 2,
+   "sel_rate": 0.05405405405405406,
+   "TPR": 1.0,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "Random Forest",
+   "sex": "Female",
+   "race": "White",
+   "n": 2578,
+   "n_pos": 301,
+   "sel_rate": 0.1152055857253685,
+   "TPR": 0.6877076411960132,
+   "status": "confirmatory"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Male",
+   "race": "Amer-Indian-Eskimo",
+   "n": 61,
+   "n_pos": 12,
+   "sel_rate": 0.14754098360655737,
+   "TPR": 0.6666666666666666,
+   "status": "confirmatory"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Male",
+   "race": "Asian-Pac-Islander",
+   "n": 185,
+   "n_pos": 68,
+   "sel_rate": 0.3945945945945946,
+   "TPR": 0.7941176470588235,
+   "status": "confirmatory"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Male",
+   "race": "Black",
+   "n": 462,
+   "n_pos": 99,
+   "sel_rate": 0.19480519480519481,
+   "TPR": 0.696969696969697,
+   "status": "confirmatory"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Male",
+   "race": "Other",
+   "n": 48,
+   "n_pos": 8,
+   "sel_rate": 0.14583333333333334,
+   "TPR": 0.625,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Male",
+   "race": "White",
+   "n": 5774,
+   "n_pos": 1796,
+   "sel_rate": 0.33979909941115344,
+   "TPR": 0.7689309576837416,
+   "status": "confirmatory"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Female",
+   "race": "Amer-Indian-Eskimo",
+   "n": 49,
+   "n_pos": 5,
+   "sel_rate": 0.08163265306122448,
+   "TPR": 0.6,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Female",
+   "race": "Asian-Pac-Islander",
+   "n": 106,
+   "n_pos": 17,
+   "sel_rate": 0.12264150943396226,
+   "TPR": 0.5882352941176471,
+   "status": "confirmatory"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Female",
+   "race": "Black",
+   "n": 469,
+   "n_pos": 29,
+   "sel_rate": 0.046908315565031986,
+   "TPR": 0.5172413793103449,
+   "status": "confirmatory"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Female",
+   "race": "Other",
+   "n": 37,
+   "n_pos": 2,
+   "sel_rate": 0.05405405405405406,
+   "TPR": 1.0,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "XGBoost",
+   "sex": "Female",
+   "race": "White",
+   "n": 2578,
+   "n_pos": 301,
+   "sel_rate": 0.10550814584949574,
+   "TPR": 0.6877076411960132,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Male",
+   "race": "Amer-Indian-Eskimo",
+   "n": 61,
+   "n_pos": 12,
+   "sel_rate": 0.14754098360655737,
+   "TPR": 0.5833333333333334,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Male",
+   "race": "Asian-Pac-Islander",
+   "n": 185,
+   "n_pos": 68,
+   "sel_rate": 0.41081081081081083,
+   "TPR": 0.8235294117647058,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Male",
+   "race": "Black",
+   "n": 462,
+   "n_pos": 99,
+   "sel_rate": 0.17532467532467533,
+   "TPR": 0.5959595959595959,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Male",
+   "race": "Other",
+   "n": 48,
+   "n_pos": 8,
+   "sel_rate": 0.1875,
+   "TPR": 0.625,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Male",
+   "race": "White",
+   "n": 5774,
+   "n_pos": 1796,
+   "sel_rate": 0.3475926567370973,
+   "TPR": 0.7472160356347439,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Female",
+   "race": "Amer-Indian-Eskimo",
+   "n": 49,
+   "n_pos": 5,
+   "sel_rate": 0.04081632653061224,
+   "TPR": 0.4,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Female",
+   "race": "Asian-Pac-Islander",
+   "n": 106,
+   "n_pos": 17,
+   "sel_rate": 0.1320754716981132,
+   "TPR": 0.5882352941176471,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Female",
+   "race": "Black",
+   "n": 469,
+   "n_pos": 29,
+   "sel_rate": 0.03837953091684435,
+   "TPR": 0.4482758620689655,
+   "status": "confirmatory"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Female",
+   "race": "Other",
+   "n": 37,
+   "n_pos": 2,
+   "sel_rate": 0.05405405405405406,
+   "TPR": 1.0,
+   "status": "exploratory (sparse)"
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "sex": "Female",
+   "race": "White",
+   "n": 2578,
+   "n_pos": 301,
+   "sel_rate": 0.10473235065942592,
+   "TPR": 0.6079734219269103,
+   "status": "confirmatory"
+  }
+ ],
+ "worst": [
+  {
+   "model": "Logistic Regression",
+   "worst_DPD": 0.3466950959488273,
+   "worst_EOD": 0.196078431372549,
+   "sex_only_DPD": 0.24103260085850708
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "worst_DPD": 0.37243127989396646,
+   "worst_EOD": 0.3752535496957403,
+   "sex_only_DPD": 0.2396764736058007
+  },
+  {
+   "model": "Random Forest",
+   "worst_DPD": 0.38879732611075896,
+   "worst_EOD": 0.3209939148073022,
+   "sex_only_DPD": 0.26225750768178974
+  },
+  {
+   "model": "XGBoost",
+   "worst_DPD": 0.3476862790295626,
+   "worst_EOD": 0.2768762677484786,
+   "sex_only_DPD": 0.23123659912428304
+  }
+ ],
+ "pareto": [
+  {
+   "candidate": "Logistic Regression (baseline)",
+   "val_acc": 0.8411138411138411,
+   "val_DPD": 0.2411582594515549,
+   "pareto": false
+  },
+  {
+   "candidate": "Random Forest (baseline)",
+   "val_acc": 0.8431613431613432,
+   "val_DPD": 0.2680546004708633,
+   "pareto": false
+  },
+  {
+   "candidate": "XGBoost (baseline)",
+   "val_acc": 0.8626126126126126,
+   "val_DPD": 0.23657429434349186,
+   "pareto": false
+  },
+  {
+   "candidate": "Neural Network (MLP) (baseline)",
+   "val_acc": 0.846027846027846,
+   "val_DPD": 0.24085708853611448,
+   "pareto": false
+  },
+  {
+   "candidate": "XGBoost + reweighing",
+   "val_acc": 0.8594389844389845,
+   "val_DPD": 0.1457291712975794,
+   "pareto": false
+  },
+  {
+   "candidate": "ExpGrad-LR eps=0.01",
+   "val_acc": 0.8321048321048321,
+   "val_DPD": 0.009743976345219063,
+   "pareto": false
+  },
+  {
+   "candidate": "ExpGrad-LR eps=0.02",
+   "val_acc": 0.8348689598689598,
+   "val_DPD": 0.02436883221545072,
+   "pareto": false
+  },
+  {
+   "candidate": "ExpGrad-LR eps=0.05",
+   "val_acc": 0.842035217035217,
+   "val_DPD": 0.06652822011204997,
+   "pareto": false
+  },
+  {
+   "candidate": "ExpGrad-LR eps=0.1",
+   "val_acc": 0.8502252252252253,
+   "val_DPD": 0.14584948832158698,
+   "pareto": false
+  },
+  {
+   "candidate": "XGBoost + ThresholdOpt (demographic_parity)",
+   "val_acc": 0.8517608517608518,
+   "val_DPD": 0.001270139149665117,
+   "pareto": true
+  },
+  {
+   "candidate": "XGBoost + ThresholdOpt (equalized_odds)",
+   "val_acc": 0.8604627354627354,
+   "val_DPD": 0.1008978374150001,
+   "pareto": true
+  },
+  {
+   "candidate": "XGBoost + ThresholdOpt (true_positive_rate_parity)",
+   "val_acc": 0.8717239967239967,
+   "val_DPD": 0.15167389167873463,
+   "pareto": true
+  }
+ ],
+ "chosen": "XGBoost + ThresholdOpt (demographic_parity)",
+ "mitigation_test": [
+  {
+   "model": "XGBoost baseline",
+   "accuracy": 0.869,
+   "f1": 0.732,
+   "DPD": 0.231,
+   "EOD": 0.096,
+   "FPRD": 0.111
+  },
+  {
+   "model": "Chosen: XGBoost + ThresholdOpt (demographic_parity)",
+   "accuracy": 0.85,
+   "f1": 0.646,
+   "DPD": 0.001,
+   "EOD": 0.323,
+   "FPRD": 0.068
+  }
+ ],
+ "table6": [
+  {
+   "method": "SHAP",
+   "consistency_spearman": 0.951,
+   "consistency_top10_jaccard": 0.873,
+   "stability_spearman": 0.957,
+   "stability_top10_jaccard": 0.818,
+   "fidelity_deletion_meanAUCdrop": 0.161,
+   "fidelity_vs_random_ratio": 63.555,
+   "fidelity_spearman_vs_single_deletion": 0.265
+  },
+  {
+   "method": "LIME",
+   "consistency_spearman": 0.985,
+   "consistency_top10_jaccard": 0.583,
+   "stability_spearman": 0.988,
+   "stability_top10_jaccard": 0.667,
+   "fidelity_deletion_meanAUCdrop": 0.117,
+   "fidelity_vs_random_ratio": 46.387,
+   "fidelity_spearman_vs_single_deletion": 0.233
+  },
+  {
+   "method": "Permutation importance",
+   "consistency_spearman": 0.907,
+   "consistency_top10_jaccard": 0.927,
+   "stability_spearman": 0.568,
+   "stability_top10_jaccard": 0.818,
+   "fidelity_deletion_meanAUCdrop": 0.14,
+   "fidelity_vs_random_ratio": 55.489,
+   "fidelity_spearman_vs_single_deletion": 0.525
+  }
+ ],
+ "governance": [
+  {
+   "construct": "Accountability",
+   "NIST": "evidence,monitoring,procedure,risk_tier",
+   "OECD": "evidence,monitoring,procedure,risk_tier",
+   "EU_AI_Act": "evidence,monitoring,procedure,risk_tier",
+   "IEEE7000": "evidence,monitoring,procedure,risk_tier",
+   "jaccard": 1.0
+  },
+  {
+   "construct": "Transparency & explainability",
+   "NIST": "evidence,monitoring,procedure,risk_tier",
+   "OECD": "evidence,monitoring,procedure,risk_tier",
+   "EU_AI_Act": "evidence,monitoring,procedure,risk_tier",
+   "IEEE7000": "evidence,monitoring,procedure,risk_tier",
+   "jaccard": 1.0
+  },
+  {
+   "construct": "Fairness / non-discrimination",
+   "NIST": "evidence,monitoring,procedure,risk_tier",
+   "OECD": "evidence,monitoring,procedure,risk_tier",
+   "EU_AI_Act": "evidence,monitoring,procedure,risk_tier",
+   "IEEE7000": "evidence,monitoring,procedure,risk_tier",
+   "jaccard": 1.0
+  },
+  {
+   "construct": "Human oversight",
+   "NIST": "evidence,monitoring,procedure,risk_tier",
+   "OECD": "evidence,monitoring,procedure,risk_tier",
+   "EU_AI_Act": "evidence,monitoring,procedure,risk_tier",
+   "IEEE7000": "evidence,monitoring,procedure,risk_tier",
+   "jaccard": 1.0
+  },
+  {
+   "construct": "Robustness, safety & security",
+   "NIST": "evidence,monitoring,procedure,risk_tier",
+   "OECD": "evidence,monitoring,procedure,risk_tier",
+   "EU_AI_Act": "evidence,monitoring,procedure,risk_tier",
+   "IEEE7000": "evidence,monitoring,procedure,risk_tier",
+   "jaccard": 1.0
+  },
+  {
+   "construct": "Purpose limitation",
+   "NIST": "evidence,procedure",
+   "OECD": "evidence,procedure",
+   "EU_AI_Act": "evidence,monitoring,procedure",
+   "IEEE7000": "evidence,monitoring,procedure",
+   "jaccard": 0.667
+  },
+  {
+   "construct": "Data protection impact assessment",
+   "NIST": "evidence,monitoring,procedure",
+   "OECD": "evidence,monitoring,procedure",
+   "EU_AI_Act": "evidence,monitoring,procedure,risk_tier",
+   "IEEE7000": "evidence,monitoring,procedure",
+   "jaccard": 0.75
+  },
+  {
+   "construct": "Independent review / audit",
+   "NIST": "evidence,monitoring,procedure",
+   "OECD": "evidence,monitoring,procedure",
+   "EU_AI_Act": "evidence,monitoring,procedure,risk_tier",
+   "IEEE7000": "evidence,monitoring,procedure",
+   "jaccard": 0.75
+  }
+ ],
+ "paper_vs": [
+  {
+   "metric": "XGBoost acc",
+   "paper": 0.901,
+   "reproduced": 0.869,
+   "difference": -0.03200000000000003
+  },
+  {
+   "metric": "XGBoost F1",
+   "paper": 0.862,
+   "reproduced": 0.732,
+   "difference": -0.13
+  },
+  {
+   "metric": "XGBoost AUC",
+   "paper": 0.951,
+   "reproduced": 0.929,
+   "difference": -0.02199999999999991
+  },
+  {
+   "metric": "MLP acc",
+   "paper": 0.893,
+   "reproduced": 0.85,
+   "difference": -0.04300000000000004
+  },
+  {
+   "metric": "MLP F1",
+   "paper": 0.851,
+   "reproduced": 0.696,
+   "difference": -0.15500000000000003
+  },
+  {
+   "metric": "RF acc",
+   "paper": 0.879,
+   "reproduced": 0.847,
+   "difference": -0.03200000000000003
+  },
+  {
+   "metric": "RF F1",
+   "paper": 0.833,
+   "reproduced": 0.705,
+   "difference": -0.128
+  },
+  {
+   "metric": "LR acc",
+   "paper": 0.842,
+   "reproduced": 0.845,
+   "difference": 0.0030000000000000027
+  },
+  {
+   "metric": "LR AUC",
+   "paper": 0.891,
+   "reproduced": 0.906,
+   "difference": 0.015000000000000013
+  },
+  {
+   "metric": "XGB DPD",
+   "paper": 0.162,
+   "reproduced": 0.23123659912428304,
+   "difference": 0.06923659912428304
+  },
+  {
+   "metric": "XGB EOD",
+   "paper": 0.128,
+   "reproduced": 0.0955109960084447,
+   "difference": -0.0324890039915553
+  },
+  {
+   "metric": "XGB FPRD",
+   "paper": 0.104,
+   "reproduced": 0.11089018641807365,
+   "difference": 0.006890186418073652
+  },
+  {
+   "metric": "MLP DPD",
+   "paper": 0.151,
+   "reproduced": 0.2396764736058007,
+   "difference": 0.08867647360580069
+  },
+  {
+   "metric": "MLP EOD",
+   "paper": 0.119,
+   "reproduced": 0.14757643358376715,
+   "difference": 0.028576433583767158
+  },
+  {
+   "metric": "MLP FPRD",
+   "paper": 0.096,
+   "reproduced": 0.12353112246862062,
+   "difference": 0.02753112246862062
+  },
+  {
+   "metric": "LR DPD",
+   "paper": 0.102,
+   "reproduced": 0.24103260085850708,
+   "difference": 0.1390326008585071
+  },
+  {
+   "metric": "LR EOD",
+   "paper": 0.081,
+   "reproduced": 0.1373881381573886,
+   "difference": 0.05638813815738859
+  },
+  {
+   "metric": "LR FPRD",
+   "paper": 0.063,
+   "reproduced": 0.12902208742961535,
+   "difference": 0.06602208742961535
+  },
+  {
+   "metric": "XGB worst-group intersectional DPD",
+   "paper": 0.214,
+   "reproduced": 0.3476862790295626,
+   "difference": 0.13368627902956262
+  },
+  {
+   "metric": "SHAP consistency rho",
+   "paper": 0.91,
+   "reproduced": 0.951,
+   "difference": 0.040999999999999925
+  },
+  {
+   "metric": "SHAP top10 Jaccard",
+   "paper": 0.88,
+   "reproduced": 0.873,
+   "difference": -0.007000000000000006
+  },
+  {
+   "metric": "PI consistency rho",
+   "paper": 0.87,
+   "reproduced": 0.907,
+   "difference": 0.03700000000000003
+  },
+  {
+   "metric": "LIME consistency rho",
+   "paper": 0.82,
+   "reproduced": 0.985,
+   "difference": 0.16500000000000004
+  },
+  {
+   "metric": "PI top10 Jaccard",
+   "paper": 0.83,
+   "reproduced": 0.927,
+   "difference": 0.09700000000000009
+  },
+  {
+   "metric": "LIME top10 Jaccard",
+   "paper": 0.74,
+   "reproduced": 0.583,
+   "difference": -0.15700000000000003
+  },
+  {
+   "metric": "SHAP stability",
+   "paper": 0.86,
+   "reproduced": 0.957,
+   "difference": 0.09699999999999998
+  },
+  {
+   "metric": "LIME stability",
+   "paper": 0.71,
+   "reproduced": 0.988,
+   "difference": 0.278
+  },
+  {
+   "metric": "PI stability",
+   "paper": 0.8,
+   "reproduced": 0.568,
+   "difference": -0.2320000000000001
+  },
+  {
+   "metric": "PI fidelity",
+   "paper": 0.88,
+   "reproduced": 0.525,
+   "difference": -0.355
+  },
+  {
+   "metric": "SHAP fidelity",
+   "paper": 0.84,
+   "reproduced": 0.265,
+   "difference": -0.575
+  },
+  {
+   "metric": "LIME fidelity",
+   "paper": 0.79,
+   "reproduced": 0.233,
+   "difference": -0.557
+  }
+ ],
+ "lr": {
+  "num": [
+   "age",
+   "fnlwgt",
+   "education-num",
+   "capital-gain",
+   "capital-loss",
+   "hours-per-week"
+  ],
+  "mean": [
+   38.66111585053745,
+   189782.192663368,
+   10.075754990615936,
+   1046.7764545299437,
+   88.14304726155946,
+   40.46258317693226
+  ],
+  "scale": [
+   13.669740919505557,
+   105779.16274461392,
+   2.581190237963886,
+   7297.794270557005,
+   404.8679313648673,
+   12.37807311996628
+  ],
+  "num_impute": [
+   37.0,
+   178469.0,
+   10.0,
+   0.0,
+   0.0,
+   40.0
+  ],
+  "num_coef": [
+   0.3208116047846472,
+   0.07078567033872735,
+   0.760086032177681,
+   2.122275165101007,
+   0.26224525813402055,
+   0.3947686791186093
+  ],
+  "cats": {
+   "workclass": {
+    "levels": [
+     "Federal-gov",
+     "Local-gov",
+     "Never-worked",
+     "Private",
+     "Self-emp-inc",
+     "Self-emp-not-inc",
+     "State-gov",
+     "Without-pay"
+    ],
+    "coef": [
+     0.5088582065318283,
+     -0.05452344694065703,
+     -0.031840300655581924,
+     0.014193185509228063,
+     0.22914418572519224,
+     -0.4471226285806798,
+     -0.22576450299595935,
+     -0.1408267744713238
+    ],
+    "impute": "Private"
+   },
+   "education": {
+    "levels": [
+     "10th",
+     "11th",
+     "12th",
+     "1st-4th",
+     "5th-6th",
+     "7th-8th",
+     "9th",
+     "Assoc-acdm",
+     "Assoc-voc",
+     "Bachelors",
+     "Doctorate",
+     "HS-grad",
+     "Masters",
+     "Preschool",
+     "Prof-school",
+     "Some-college"
+    ],
+    "coef": [
+     -0.06394627321632343,
+     -0.16403240346629153,
+     -0.17398384453589197,
+     0.21332694531937196,
+     0.20877856417154392,
+     -0.03532707305660818,
+     -0.19642316954197495,
+     -0.2493608756441983,
+     -0.0962894911121541,
+     -0.0148920721715208,
+     0.16666806683698646,
+     -0.07760031810871211,
+     0.08539255870876494,
+     -0.07759257411236263,
+     0.2702072824615595,
+     0.0571926015898654
+    ],
+    "impute": "HS-grad"
+   },
+   "marital-status": {
+    "levels": [
+     "Divorced",
+     "Married-AF-spouse",
+     "Married-civ-spouse",
+     "Married-spouse-absent",
+     "Never-married",
+     "Separated",
+     "Widowed"
+    ],
+    "coef": [
+     -0.2918158528313702,
+     0.483128386228804,
+     1.2998247211072154,
+     -0.22451945982911398,
+     -0.779488169853581,
+     -0.3363229305790302,
+     -0.29868877012088213
+    ],
+    "impute": "Married-civ-spouse"
+   },
+   "occupation": {
+    "levels": [
+     "Adm-clerical",
+     "Armed-Forces",
+     "Craft-repair",
+     "Exec-managerial",
+     "Farming-fishing",
+     "Handlers-cleaners",
+     "Machine-op-inspct",
+     "Other-service",
+     "Priv-house-serv",
+     "Prof-specialty",
+     "Protective-serv",
+     "Sales",
+     "Tech-support",
+     "Transport-moving"
+    ],
+    "coef": [
+     0.032999829019403654,
+     0.11747639450524722,
+     0.09289681317187072,
+     0.7453532090675865,
+     -0.7896569495538266,
+     -0.4692406364346411,
+     -0.18736728868899624,
+     -0.6994662077287326,
+     -0.409772738194832,
+     0.2568573274584895,
+     0.42878798336193663,
+     0.2945520325800553,
+     0.529776563808354,
+     -0.09107840824987555
+    ],
+    "impute": "Prof-specialty"
+   },
+   "relationship": {
+    "levels": [
+     "Husband",
+     "Not-in-family",
+     "Other-relative",
+     "Own-child",
+     "Unmarried",
+     "Wife"
+    ],
+    "coef": [
+     0.2230968930633762,
+     0.035114964080294575,
+     -0.48946549930288813,
+     -0.9108496628732975,
+     -0.10940576914928718,
+     1.103626998303851
+    ],
+    "impute": "Husband"
+   },
+   "race": {
+    "levels": [
+     "Amer-Indian-Eskimo",
+     "Asian-Pac-Islander",
+     "Black",
+     "Other",
+     "White"
+    ],
+    "coef": [
+     -0.38987929422612366,
+     0.1863875103039973,
+     -0.19217166607664304,
+     0.12929986256706763,
+     0.11848151155374848
+    ],
+    "impute": "White"
+   },
+   "sex": {
+    "levels": [
+     "Female",
+     "Male"
+    ],
+    "coef": [
+     -0.35834992800510174,
+     0.21046785212715285
+    ],
+    "impute": "Male"
+   },
+   "native-country": {
+    "levels": [
+     "Cambodia",
+     "Canada",
+     "China",
+     "Columbia",
+     "Cuba",
+     "Dominican-Republic",
+     "Ecuador",
+     "El-Salvador",
+     "England",
+     "France",
+     "Germany",
+     "Greece",
+     "Guatemala",
+     "Haiti",
+     "Honduras",
+     "Hong",
+     "Hungary",
+     "India",
+     "Iran",
+     "Ireland",
+     "Italy",
+     "Jamaica",
+     "Japan",
+     "Laos",
+     "Mexico",
+     "Nicaragua",
+     "Outlying-US(Guam-USVI-etc)",
+     "Peru",
+     "Philippines",
+     "Poland",
+     "Portugal",
+     "Puerto-Rico",
+     "Scotland",
+     "South",
+     "Taiwan",
+     "Thailand",
+     "Trinadad&Tobago",
+     "United-States",
+     "Vietnam",
+     "Yugoslavia"
+    ],
+    "coef": [
+     0.31680759320232516,
+     0.4868148989348681,
+     -0.026965523682589046,
+     -0.27353466073449967,
+     0.024858261438005232,
+     -0.26454234712953517,
+     0.031205728751971827,
+     -0.049732061651995965,
+     0.3149553096438614,
+     0.052707940722656575,
+     0.27215459167764094,
+     -0.12540558661609297,
+     -0.18760157082074477,
+     0.10066538647735687,
+     -0.03754977624099663,
+     0.040154737534102904,
+     0.10963153446455554,
+     -0.1305687281717155,
+     0.21545283157465878,
+     0.28889763232738436,
+     0.409334332165126,
+     0.025519624802770383,
+     -0.2285775793459446,
+     -0.06621562404897939,
+     -0.3690163463589151,
+     -0.2833951489385598,
+     -0.07846999693489176,
+     -0.15084441156559397,
+     0.2541268935901691,
+     0.10080726436385348,
+     0.364456822756123,
+     0.05786499558275147,
+     -0.20872761401603834,
+     -0.5920430175736124,
+     -0.15518030662457505,
+     -0.20918091303578673,
+     -0.19268925767022582,
+     0.29462140446146723,
+     -0.41832962734606205,
+     0.13965023815775499
+    ],
+    "impute": "United-States"
+   }
+  },
+  "intercept": -2.6748321818180925,
+  "threshold": 0.37499999999999994,
+  "group": {
+   "thresholds": {
+    "Male": 0.49423443605639755,
+    "Female": 0.08075379709120067
+   },
+   "test": {
+    "accuracy": 0.8158460436073293,
+    "f1": 0.6317297850562947,
+    "DPD": 0.00840044310653043,
+    "EOD": 0.283883347436259,
+    "FPRD": 0.08717599620981553
+   }
+  },
+  "base": {
+   "accuracy": 0.845,
+   "DPD": 0.24103260085850708,
+   "EOD": 0.1373881381573886,
+   "FPRD": 0.12902208742961535
+  }
+ }
+}

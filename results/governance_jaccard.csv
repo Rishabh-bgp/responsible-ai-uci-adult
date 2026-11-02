@@ -1,0 +1,9 @@
+construct,NIST,OECD,EU_AI_Act,IEEE7000,jaccard
+Accountability,"evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier",1.0
+Transparency & explainability,"evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier",1.0
+Fairness / non-discrimination,"evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier",1.0
+Human oversight,"evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier",1.0
+"Robustness, safety & security","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure,risk_tier",1.0
+Purpose limitation,"evidence,procedure","evidence,procedure","evidence,monitoring,procedure","evidence,monitoring,procedure",0.667
+Data protection impact assessment,"evidence,monitoring,procedure","evidence,monitoring,procedure","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure",0.75
+Independent review / audit,"evidence,monitoring,procedure","evidence,monitoring,procedure","evidence,monitoring,procedure,risk_tier","evidence,monitoring,procedure",0.75

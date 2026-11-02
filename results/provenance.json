@@ -1,0 +1,52 @@
+{
+  "title": "Adult (Census Income)",
+  "doi": "10.24432/C5XW20",
+  "license": "CC BY 4.0",
+  "citation": "Becker, B. & Kohavi, R. (1996). Adult. UCI Machine Learning Repository. https://doi.org/10.24432/C5XW20",
+  "source_url": "https://archive.ics.uci.edu/ml/machine-learning-databases/adult/",
+  "retrieved_utc": "2026-11-02T14:44:04.320553+00:00",
+  "sha256": {
+    "adult.data": "5b00264637dbfec36bdeaab5676b0b309ff9eb788d63554ca0a249491c86603d",
+    "adult.test": "a2a9044bc167a35b2361efbabec64e89d69ce82d9790d2980119aac5fd7e9c05",
+    "adult.names": "c248284c0b5de30c9e1958d6cdd168a34a654758b620e68f46aefa83fc0a576a"
+  },
+  "n_instances": 48842,
+  "n_features": 14,
+  "positive_rate": 0.23928176569346055,
+  "missing_values": {
+    "workclass": {
+      "count": 2799,
+      "pct": 5.731
+    },
+    "occupation": {
+      "count": 2809,
+      "pct": 5.751
+    },
+    "native-country": {
+      "count": 857,
+      "pct": 1.755
+    }
+  },
+  "rows_with_any_missing": 3620,
+  "quasi_identifiers": [
+    "age",
+    "sex",
+    "race",
+    "native-country",
+    "marital-status",
+    "relationship",
+    "education",
+    "occupation"
+  ],
+  "mitigations": [
+    "no re-identification attempts",
+    "no external linkage",
+    "access-controlled storage",
+    "aggregate-only reporting (no row-level outputs)"
+  ],
+  "purpose_limitation": "research benchmark for fairness/XAI auditing only; not for decisions about individuals",
+  "legal_basis": "public dataset under CC BY 4.0; secondary research use",
+  "temporal_bias": "1994 Census (CPS) extract; labour-market conditions and income threshold are dated",
+  "sampling_bias": "U.S. population only; fnlwgt weighting not used in modelling; race categories coarse",
+  "label_notes": ">50K label reflects historical labour-market inequality"
+}

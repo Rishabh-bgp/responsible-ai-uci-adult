@@ -1,0 +1,85 @@
+{
+  "config": {
+    "seed": 42,
+    "split": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2,
+      "stratify": "income x sex"
+    },
+    "n_boot": 5000,
+    "min_cell": 50,
+    "min_pos": 10,
+    "cv_folds": 3,
+    "threshold_rule": "max F1 on validation",
+    "pareto_rule": "max validation accuracy s.t. validation DPD(sex) <= 0.05; fallback min DPD",
+    "protected": {
+      "sex": {
+        "Male": "Group A",
+        "Female": "Group B"
+      },
+      "race": "as in source"
+    }
+  },
+  "seeds": {
+    "global_": 42,
+    "explainer_runs": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "bootstrap": 42
+  },
+  "best_params": {
+    "Logistic Regression": {
+      "clf__C": "0.1"
+    },
+    "Random Forest": {
+      "clf__max_depth": "20",
+      "clf__min_samples_leaf": "3",
+      "clf__n_estimators": "300"
+    },
+    "XGBoost": {
+      "clf__learning_rate": "0.05",
+      "clf__max_depth": "4",
+      "clf__n_estimators": "600"
+    },
+    "Neural Network (MLP)": {
+      "clf__alpha": "0.01",
+      "clf__hidden_layer_sizes": "(64,)"
+    }
+  },
+  "thresholds": {
+    "Logistic Regression": 0.37499999999999994,
+    "Random Forest": 0.3449999999999999,
+    "XGBoost": 0.38499999999999995,
+    "Neural Network (MLP)": 0.36999999999999994
+  },
+  "split_sizes": {
+    "train": 29305,
+    "val": 9768,
+    "test": 9769
+  },
+  "data_sha256": {
+    "adult.data": "5b00264637dbfec36bdeaab5676b0b309ff9eb788d63554ca0a249491c86603d",
+    "adult.test": "a2a9044bc167a35b2361efbabec64e89d69ce82d9790d2980119aac5fd7e9c05",
+    "adult.names": "c248284c0b5de30c9e1958d6cdd168a34a654758b620e68f46aefa83fc0a576a"
+  },
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "shap": "0.54.1",
+    "lime": "0.2.0.1",
+    "fairlearn": "0.15.0",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "python": "3.13.5",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "runtime_sec": 239.3,
+  "chosen_mitigation": "XGBoost + ThresholdOpt (demographic_parity)"
+}

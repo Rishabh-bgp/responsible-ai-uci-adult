@@ -1,0 +1,4 @@
+method,consistency_spearman,consistency_top10_jaccard,stability_spearman,stability_top10_jaccard,fidelity_deletion_meanAUCdrop,fidelity_vs_random_ratio,fidelity_spearman_vs_single_deletion
+SHAP,0.951,0.873,0.957,0.818,0.161,63.555,0.265
+LIME,0.985,0.583,0.988,0.667,0.117,46.387,0.233
+Permutation importance,0.907,0.927,0.568,0.818,0.14,55.489,0.525

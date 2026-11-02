@@ -1,0 +1,73 @@
+control_id,nist_subcategory,function,required_artifact,evidence_type,review_cadence
+CTL-001,GOVERN 1.1,GOVERN,risk register,documented procedure,Annual
+CTL-002,GOVERN 1.2,GOVERN,model card,audit evidence,Annual
+CTL-003,GOVERN 1.3,GOVERN,datasheet/provenance JSON,operational monitoring,Annual
+CTL-004,GOVERN 1.4,GOVERN,DPIA,documented procedure,Annual
+CTL-005,GOVERN 1.5,GOVERN,fairness audit report,audit evidence,Annual
+CTL-006,GOVERN 1.6,GOVERN,explanation audit report,operational monitoring,Annual
+CTL-007,GOVERN 1.7,GOVERN,monitoring dashboard,documented procedure,Annual
+CTL-008,GOVERN 2.1,GOVERN,incident log,audit evidence,Annual
+CTL-009,GOVERN 2.2,GOVERN,risk register,operational monitoring,Annual
+CTL-010,GOVERN 2.3,GOVERN,model card,documented procedure,Annual
+CTL-011,GOVERN 3.1,GOVERN,datasheet/provenance JSON,audit evidence,Annual
+CTL-012,GOVERN 3.2,GOVERN,DPIA,operational monitoring,Annual
+CTL-013,GOVERN 4.1,GOVERN,fairness audit report,documented procedure,Annual
+CTL-014,GOVERN 4.2,GOVERN,explanation audit report,audit evidence,Annual
+CTL-015,GOVERN 4.3,GOVERN,monitoring dashboard,operational monitoring,Annual
+CTL-016,GOVERN 5.1,GOVERN,incident log,documented procedure,Annual
+CTL-017,GOVERN 5.2,GOVERN,risk register,audit evidence,Annual
+CTL-018,GOVERN 6.1,GOVERN,model card,operational monitoring,Annual
+CTL-019,GOVERN 6.2,GOVERN,datasheet/provenance JSON,documented procedure,Annual
+CTL-020,MAP 1.1,MAP,DPIA,audit evidence,Per release
+CTL-021,MAP 1.2,MAP,fairness audit report,operational monitoring,Per release
+CTL-022,MAP 1.3,MAP,explanation audit report,documented procedure,Per release
+CTL-023,MAP 1.4,MAP,monitoring dashboard,audit evidence,Per release
+CTL-024,MAP 1.5,MAP,incident log,operational monitoring,Per release
+CTL-025,MAP 1.6,MAP,risk register,documented procedure,Per release
+CTL-026,MAP 2.1,MAP,model card,audit evidence,Per release
+CTL-027,MAP 2.2,MAP,datasheet/provenance JSON,operational monitoring,Per release
+CTL-028,MAP 2.3,MAP,DPIA,documented procedure,Per release
+CTL-029,MAP 3.1,MAP,fairness audit report,audit evidence,Per release
+CTL-030,MAP 3.2,MAP,explanation audit report,operational monitoring,Per release
+CTL-031,MAP 3.3,MAP,monitoring dashboard,documented procedure,Per release
+CTL-032,MAP 3.4,MAP,incident log,audit evidence,Per release
+CTL-033,MAP 3.5,MAP,risk register,operational monitoring,Per release
+CTL-034,MAP 4.1,MAP,model card,documented procedure,Per release
+CTL-035,MAP 4.2,MAP,datasheet/provenance JSON,audit evidence,Per release
+CTL-036,MAP 5.1,MAP,DPIA,operational monitoring,Per release
+CTL-037,MAP 5.2,MAP,fairness audit report,documented procedure,Per release
+CTL-038,MEASURE 1.1,MEASURE,explanation audit report,audit evidence,Quarterly
+CTL-039,MEASURE 1.2,MEASURE,monitoring dashboard,operational monitoring,Quarterly
+CTL-040,MEASURE 1.3,MEASURE,incident log,documented procedure,Quarterly
+CTL-041,MEASURE 2.1,MEASURE,risk register,audit evidence,Quarterly
+CTL-042,MEASURE 2.2,MEASURE,model card,operational monitoring,Quarterly
+CTL-043,MEASURE 2.3,MEASURE,datasheet/provenance JSON,documented procedure,Quarterly
+CTL-044,MEASURE 2.4,MEASURE,DPIA,audit evidence,Quarterly
+CTL-045,MEASURE 2.5,MEASURE,fairness audit report,operational monitoring,Quarterly
+CTL-046,MEASURE 2.6,MEASURE,explanation audit report,documented procedure,Quarterly
+CTL-047,MEASURE 2.7,MEASURE,monitoring dashboard,audit evidence,Quarterly
+CTL-048,MEASURE 2.8,MEASURE,incident log,operational monitoring,Quarterly
+CTL-049,MEASURE 2.9,MEASURE,risk register,documented procedure,Quarterly
+CTL-050,MEASURE 2.10,MEASURE,model card,audit evidence,Quarterly
+CTL-051,MEASURE 2.11,MEASURE,datasheet/provenance JSON,operational monitoring,Quarterly
+CTL-052,MEASURE 2.12,MEASURE,DPIA,documented procedure,Quarterly
+CTL-053,MEASURE 2.13,MEASURE,fairness audit report,audit evidence,Quarterly
+CTL-054,MEASURE 3.1,MEASURE,explanation audit report,operational monitoring,Quarterly
+CTL-055,MEASURE 3.2,MEASURE,monitoring dashboard,documented procedure,Quarterly
+CTL-056,MEASURE 3.3,MEASURE,incident log,audit evidence,Quarterly
+CTL-057,MEASURE 4.1,MEASURE,risk register,operational monitoring,Quarterly
+CTL-058,MEASURE 4.2,MEASURE,model card,documented procedure,Quarterly
+CTL-059,MEASURE 4.3,MEASURE,datasheet/provenance JSON,audit evidence,Quarterly
+CTL-060,MANAGE 1.1,MANAGE,DPIA,operational monitoring,Continuous / event-triggered
+CTL-061,MANAGE 1.2,MANAGE,fairness audit report,documented procedure,Continuous / event-triggered
+CTL-062,MANAGE 1.3,MANAGE,explanation audit report,audit evidence,Continuous / event-triggered
+CTL-063,MANAGE 1.4,MANAGE,monitoring dashboard,operational monitoring,Continuous / event-triggered
+CTL-064,MANAGE 2.1,MANAGE,incident log,documented procedure,Continuous / event-triggered
+CTL-065,MANAGE 2.2,MANAGE,risk register,audit evidence,Continuous / event-triggered
+CTL-066,MANAGE 2.3,MANAGE,model card,operational monitoring,Continuous / event-triggered
+CTL-067,MANAGE 2.4,MANAGE,datasheet/provenance JSON,documented procedure,Continuous / event-triggered
+CTL-068,MANAGE 3.1,MANAGE,DPIA,audit evidence,Continuous / event-triggered
+CTL-069,MANAGE 3.2,MANAGE,fairness audit report,operational monitoring,Continuous / event-triggered
+CTL-070,MANAGE 4.1,MANAGE,explanation audit report,documented procedure,Continuous / event-triggered
+CTL-071,MANAGE 4.2,MANAGE,monitoring dashboard,audit evidence,Continuous / event-triggered
+CTL-072,MANAGE 4.3,MANAGE,incident log,operational monitoring,Continuous / event-triggered

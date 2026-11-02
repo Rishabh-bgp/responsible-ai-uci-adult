@@ -1,0 +1,32 @@
+,paper,reproduced,difference
+XGBoost acc,0.901,0.869,-0.032
+XGBoost F1,0.862,0.732,-0.13
+XGBoost AUC,0.951,0.929,-0.022
+MLP acc,0.893,0.85,-0.043
+MLP F1,0.851,0.696,-0.155
+RF acc,0.879,0.847,-0.032
+RF F1,0.833,0.705,-0.128
+LR acc,0.842,0.845,0.003
+LR AUC,0.891,0.906,0.015
+XGB DPD,0.162,0.231,0.069
+XGB EOD,0.128,0.096,-0.032
+XGB FPRD,0.104,0.111,0.007
+MLP DPD,0.151,0.24,0.089
+MLP EOD,0.119,0.148,0.029
+MLP FPRD,0.096,0.124,0.028
+LR DPD,0.102,0.241,0.139
+LR EOD,0.081,0.137,0.056
+LR FPRD,0.063,0.129,0.066
+XGB worst-group intersectional DPD,0.214,0.348,0.134
+SHAP consistency rho,0.91,0.951,0.041
+SHAP top10 Jaccard,0.88,0.873,-0.007
+PI consistency rho,0.87,0.907,0.037
+LIME consistency rho,0.82,0.985,0.165
+PI top10 Jaccard,0.83,0.927,0.097
+LIME top10 Jaccard,0.74,0.583,-0.157
+SHAP stability,0.86,0.957,0.097
+LIME stability,0.71,0.988,0.278
+PI stability,0.8,0.568,-0.232
+PI fidelity,0.88,0.525,-0.355
+SHAP fidelity,0.84,0.265,-0.575
+LIME fidelity,0.79,0.233,-0.557
