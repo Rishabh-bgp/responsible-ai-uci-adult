@@ -28,3 +28,4 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:8px}form label{display:flex;
 select,input[type=number]{background:#16162a;color:var(--txt);border:1px solid var(--line);border-radius:6px;padding:5px;font:inherit}
 .tog{display:block;margin:12px 0;font-size:12px}.gauge{height:14px;background:#1a1a2c;border-radius:7px;overflow:hidden}#gfill{height:100%;width:0;background:linear-gradient(90deg,var(--b),var(--c),var(--a));transition:width .4s}
 footer{padding:20px 4vw 40px;border-top:1px solid var(--line);color:var(--mut);font-size:12px}footer b{color:var(--txt)}
+@media(max-width:600px){.bars .row{grid-template-columns:105px 1fr 48px;font-size:11px}form{grid-template-columns:1fr}}
