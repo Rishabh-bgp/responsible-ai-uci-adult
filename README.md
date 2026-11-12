@@ -284,6 +284,7 @@ requirements.txt  LICENSE  README.md
 - [Machine Learning Part 2](https://github.com/Rishabh-bgp/machine-learning-part-2) — YOLO11 task tour & potato leaf disease classification
 - [Machine Learning Part 3](https://github.com/Rishabh-bgp/machine-learning-part-3) — road damage detection · [live demo](https://rishabh-bgp.github.io/machine-learning-part-3/)
 - **Responsible AI on UCI Adult** — fairness, explainability & governance audit (this repository)
+- [Brain Tumour MRI Classification](https://github.com/Rishabh-bgp/brain-tumor-mri-classification) — leakage-aware EfficientNet-B0 with sanity-checked XAI · [NEURO//SCAN](https://rishabh-bgp.github.io/brain-tumor-mri-classification/)
 - [NIELIT Machine Learning Projects](https://github.com/Rishabh-bgp/NIELIT-MACHINE-LEARNING-PROJECTS)
 - [All repositories](https://github.com/Rishabh-bgp?tab=repositories)
 
